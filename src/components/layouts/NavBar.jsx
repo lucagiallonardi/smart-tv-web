@@ -7,7 +7,7 @@ const NavBar = () => {
     const handleLogout = async () => {
         localStorage.removeItem('token');
         localStorage.removeItem('userAct');
-        window.location.reload();
+        window.location.href = '/';;
         };
 
 
