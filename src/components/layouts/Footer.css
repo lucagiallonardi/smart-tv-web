@@ -1,0 +1,11 @@
+.footerContainer{
+    background-color: rgb(4, 2, 24);
+    color: #ffffff6e;
+    font-size: 1vw;
+    border: none;
+}
+
+.card-header{
+    border: none;
+    padding-bottom: 0;
+}

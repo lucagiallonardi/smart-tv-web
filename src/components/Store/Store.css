@@ -1,0 +1,77 @@
+.storeDiv{
+    background-color: rgb(4, 2, 24);
+    height: 100%;
+}
+
+.titleAppStore{
+    color: #fff;
+    padding-top: 8vw;
+}
+.buttonsStore{
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . ."
+    ". . . ."
+    ". . . ."; 
+    padding-top: 2vw;
+    width: 80vw;
+    margin: auto;
+}
+.buttonStoreDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 12vw;
+}
+
+.buttonImg{
+    margin-top: 2vw;
+    width: 12vw;
+    border-radius: 15px;
+}
+
+.buttonInstallStore{
+    margin-top: .5vw;
+    border-radius: 20px;
+    font-size: 1.2vw;
+}
+
+.alert{
+    bottom: 30vw;
+    color: #000;
+    font-weight: bold;
+    width: 50vw;
+    margin: auto;
+    font-size: 1vw;    
+}
+
+.ok{
+    background-color: green;
+}
+
+.des{
+color: rgb(36, 250, 36);
+background-color: transparent;
+border: none;
+}
+
+.des:hover{
+transition: all ease-in .5s;
+background-color: rgb(36, 250, 36);
+color: #000;
+}
+.del{
+background-color: transparent;
+color: rgb(248, 15, 15);
+border: none;
+}
+
+.del:hover{
+transition: all ease-in .5s;
+background-color: rgb(248, 15, 15);
+color: #000;
+}

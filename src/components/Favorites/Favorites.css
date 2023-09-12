@@ -1,0 +1,78 @@
+.favoritesContainer{
+    background-color: rgb(4, 2, 24);
+    height:100%;
+}
+
+.buttonSimboloMas{
+    display: none;
+}
+
+.titleFavsDiv{
+    padding-top: 7vw;
+    color: #fff;
+}
+
+.favoritesDiv{
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . ."
+    ". . . ."
+    ". . . ."; 
+    padding-top: 2vw;
+    height: 100vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.favsDivItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favsDivItems>h2{
+    font-size: 1.3vw;
+    color: #fff;
+}
+.favImgs{
+    margin: 1vw;
+    width: 15vw;
+    height: 9vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.simboloMas:hover{
+    transform: scale(.9);
+    box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+}
+
+.buttonDeleteFavs{
+    position: absolute;   
+    border-radius: 50%;
+    background-color: #000;
+    color: rgb(248, 15, 15);
+    border: none;
+    display: flex;
+    margin-left: 15vw;
+    height: 2vw;
+    width: 2vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.buttonDeleteFavs:hover{
+    opacity: 1;
+    background-color: rgb(248, 15, 15);
+    color: #000;
+    transition: all .5s;
+}
+
+.formFavsOther{
+    margin-left: 27vw !important;
+}

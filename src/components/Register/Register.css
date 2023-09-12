@@ -1,0 +1,102 @@
+.registerContainer{
+    height: 100%;
+    background-color: rgb(4, 2, 24);
+    color: #fff;
+    display: flex;
+
+}
+
+.imgRegister{
+    padding-right: 20vw;
+    height: 100%;
+    width: 80vw;
+    object-fit: cover;
+    position: fixed;
+}
+
+.gradient-register{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( -90deg, rgb(4, 2, 24) 40vw, transparent);
+}
+
+    .registerDivRight{
+    display: flex;
+    flex-direction: column;
+    margin-left: 65vw;
+    margin-top: 10vw;
+    background-color: rgb(95, 95, 95, .2);
+    height: 30vw;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 100 ;
+}
+
+.registerDivRight>h2{
+    font-size: 2.5vw;
+}
+
+.inputRegisterUsername>input, .inputRegisterPassword>input{
+    background-color: transparent;
+    border: none;
+    margin-top: 2vw;
+    padding-left: 1vw;
+    color: #fff;
+    font-size: 1.3vw;
+}
+
+.inputRegisterUsername>input:focus, .inputRegisterPassword>input:focus{
+    outline: none;
+    border: none;
+}
+
+.inputRegisterUsername, .inputRegisterPassword{
+    border-bottom: solid 2px #fff;
+}
+
+.iconoRegister{
+    font-size: 1.2vw;
+}
+
+.eyeButtonRegister1{
+    position: absolute;
+    top: 20.9vw;
+    right: 14vw;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5vw;
+}
+.eyeButtonRegister2{
+    position: absolute;
+    top: 25.1vw;
+    right: 14vw;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+.registerDivRight>button{
+    margin-top: 2vw;
+    border-radius: 20px;
+    border: none;
+    height: 3vw;
+    width: 10vw;    
+    background-color: #730cc7;
+    color: #fff;
+    font-size: 1.2vw;
+}
+
+.registerDivRight>p{
+    margin-top: 1.5vw;
+    font-size: 1.1vw;
+}

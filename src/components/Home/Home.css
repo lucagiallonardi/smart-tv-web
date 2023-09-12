@@ -1,0 +1,204 @@
+.homeDiv{
+    background-color: rgb(4, 2, 24);
+}
+.coverItem{
+    width: 100vw;
+    height: 50vw;
+}
+
+.coverItem>img{
+    margin-left: 10vw;
+    height: 55vw;
+    object-fit: cover;
+}
+
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( 30deg, rgb(4, 2, 24) 45vw, transparent);
+}
+
+.gradient-overlay >h1,h2{
+    opacity: .8;
+}
+
+.coverTitle{
+    padding-top: 20vw;
+    padding-left: 4.5vw;
+    display: flex;
+    align-items: flex-end;
+    font-size: 2.5vw;
+}
+
+.coverDesc{
+    display: flex;
+    align-items: flex-end;
+    padding-left: 4.5vw;
+    font-size: 1.5vw;
+}
+
+
+
+/* PARTE DE FAV APPS */
+.favapps{
+    bottom: 20vw;
+}
+.favapps >h1{
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: start;
+    margin-left: 5vw;
+    opacity: .8;
+}
+
+
+.favapps-item-img{
+    width: 12vw;
+    height: 7vw;
+    margin: .5vw;
+    border-radius: 10px;
+    cursor:pointer;
+    transition: transform 0.5s ease;
+}
+
+.favapps-item-img:hover{
+    transform: scale(.9);
+    box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+}
+
+.simboloMas{
+    opacity: .3;
+    cursor: pointer;
+}
+
+
+
+.botonPrev{
+    opacity: 0;
+    margin-top: 1.5vw;
+    width: 2.5vw;
+    margin-right: 10vw;  
+}
+.botonNext{
+    margin-top: 1.5vw;
+    opacity: 0;
+    width: 2.5vw;
+    margin-left: 10vw;
+}
+
+/* recomended */
+.recomended-app{
+    bottom: 17vw;
+}
+
+.recomended-app >h1{
+    font-size: 1.5vw;
+    color: #fff;
+    text-align: start;
+    margin-left: 5vw;
+    opacity: .8;
+}
+
+.recomended-item-img{
+    width: 22vw;
+    height: 15vw;
+    object-fit: cover;
+    margin: .5vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.recomended-item-img:hover{
+    transform: scale(.9);
+    box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+}
+
+.recomended-item-img{
+    width: 22vw;
+    height: 15vw;
+    object-fit: cover;
+    margin: .5vw;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.recomended-item-img:hover{
+    transform: scale(.9);
+    box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-webkit-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 20px -7px rgba(255,255,255,0.75);
+}
+
+.fav{
+    margin-top: 1vw;
+}
+
+.formFavs{
+    bottom: 10vw;
+    margin-left: 35vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 30vw;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 1.2vw;
+}
+
+.formFavs>h2{
+    margin: 0;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.formFavs>div{
+    margin: 1vw;
+}
+
+.form-group>input{
+    height: 3vw;
+    width: 25vw;
+    border-radius: 20px;
+    padding-left: 1vw;
+    border: none;
+}
+
+.form-group>input:focus{
+    border: none;
+    outline: none;
+}
+.formFavs>button{
+    border-radius: 20px;
+    border: none;
+    height: 3vw;
+    width: 10vw;    
+    background-color: #730cc7;
+    color: #fff;
+}
+
+.formFavTitulo{
+    display: flex;
+}
+
+.formFavTitulo>h1{
+    font-size: 1.5vw;
+    font-weight: bolder;
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+.navbar{
+    position: fixed;
+    z-index: 100;
+    font-size: 2vw;
+    background: linear-gradient(to bottom, rgb(4, 2, 24), transparent);
+    width: 100vw;
+}
+
+.navbar-brand{
+    color: gray;
+    font-weight:500 ;
+    margin-left: 1vw;
+    font-size: 1.5vw;
+}
+
+.navbar-brand:hover{
+    color: gray;
+}
+
+.nav-link{
+    color: #fff;
+    width: 100%;
+    font-weight:500;
+    opacity: .8
+}
+
+
+.nav-link2{
+    width: 12vw;
+    margin-left: 1vw;
+    text-align: center;
+    transition: all .5s;
+    border-radius: 30px;
+    opacity: .8
+}
+
+.nav-link2:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+
+.dropdown{
+    margin-left: 29vw;
+    
+}
+
+.dropdown-toggle{
+    width: 4.3vw;
+    background-color: transparent;
+    color: #fff !important;
+    margin-left:7vw;
+}
+
+.dropdown-menu{
+    text-align: center;
+    background-color: rgb(4, 2, 24);
+    color: #fff; 
+}
+
+
+.dropdown-menu>h5{
+    font-size: 1vw;
+    font-weight: bolder;
+}
+.dropdown-item{
+    color: #fff;
+    cursor: pointer;
+}
+.dropdown-item:hover{
+    background-color: gray;
+    transition: all .5s;
+}
