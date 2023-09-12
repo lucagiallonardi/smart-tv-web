@@ -107,7 +107,7 @@ setElements(storedElements);
         const decodedToken = jwt_decode(token);
         const userId = decodedToken.sub;
         const itemWithUserId = { ...item, userId };
-          const response = await fetch('http://localhost:5000/api/items', {
+          const response = await fetch('https://gtv-render.onrender.com/api/items', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ const Register = () => {
 
             // esto  es para quitarle espacios en blanco adelante y atras
 
-            const response = await fetch('http://localhost:5000/api/register',{
+            const response = await fetch('https://gtv-render.onrender.com/api/register',{
                 method: 'POST',
                 headers: {
                     'Content-Type':'application/json'

@@ -25,7 +25,7 @@ const Home = () => {
             try{
                 const decodedToken = jwt_decode(token);
                 const userId = decodedToken.sub;
-                const response = await fetch('http://localhost:5000/api/items',{
+                const response = await fetch('https://gtv-render.onrender.com/api/items',{
                     headers:{
                         Authorization: `${token}`,
                         'User-Id': userId,
@@ -84,7 +84,7 @@ const Home = () => {
         // agregar favoritos
         const addFavoriteItem = async (newItem) => {
           try {
-            const response = await fetch('http://localhost:5000/api/add-favorite-item', {
+            const response = await fetch('https://gtv-render.onrender.com/api/add-favorite-item', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -116,7 +116,7 @@ const Home = () => {
         const addItemFavoritePlaceholder = { title: "Agregar", image: "https://i.postimg.cc/W33cWb9R/simbolo.jpg", link: "/" };
         const fetchItemsFromServer = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/favorite-items', {
+      const response = await fetch('https://gtv-render.onrender.com/api/favorite-items', {
         headers: {
           Authorization: token,
         },
