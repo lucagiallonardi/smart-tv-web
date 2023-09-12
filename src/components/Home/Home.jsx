@@ -7,6 +7,7 @@ import marvel from './media/mcu.jpg';
 import got from './media/got.jpeg';
 import { Link } from 'react-router-dom';
 import Footer from '../layouts/Footer';
+import { Spinner } from '../layouts/Spinner';
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
   const [link, setLink] = useState('');
   const [favoriteItems, setFavoriteItems] = useState([]);   
   const [showForm, setShowForm] = useState(false); 
+  const [isLoading, setIsLoading] = useState("");
     
     
     useEffect(()=>{
@@ -66,8 +68,9 @@ const Home = () => {
 
         // FORMULARIO
         const handleSubmit = async (e) => {
+          
           e.preventDefault();
-         
+         setIsLoading(true)
           const newItem = {
             title,
             image,
@@ -75,11 +78,12 @@ const Home = () => {
           };
 
           await addFavoriteItem(newItem);
-      
           setTitle('');
           setImage('');
           setLink('');
+          setIsLoading(false)
         };
+
 
         // agregar favoritos
         const addFavoriteItem = async (newItem) => {
@@ -108,6 +112,8 @@ const Home = () => {
             console.error('Error adding favorite item:', error);
           }
         };
+
+       
 
         
 
@@ -145,7 +151,9 @@ for (let i = 0; i < favoriteItems.length; i += itemsPerGroup2) {
   groupedItems2.push(favoriteItems.slice(i, i + itemsPerGroup2));
 }
 
-
+if(isLoading){
+  return<Spinner/>
+}
 
 
     
@@ -181,7 +189,7 @@ for (let i = 0; i < favoriteItems.length; i += itemsPerGroup2) {
                     {groupedItems.map((group, index) => (
                   <div className={`carousel-item favapps-item ${index === 0 ? "active" : ""}`} key={index}>
                     {group.map((item, itemIndex) => (
-                      <Link to={item.link} target='_label'><img src={item.image} alt={item.title} key={item._id || itemIndex} 
+                      <Link to={item.link} target={item.title === "Agregar" ? "" : "'_label'"}><img src={item.image} alt={item.title} key={item._id || itemIndex} 
                       className={item.title === "Agregar" ? "simboloMas favapps-item-img" : "favapps-item-img"}/></Link>
                     ))}
                   </div>

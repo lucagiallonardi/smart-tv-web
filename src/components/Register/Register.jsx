@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Register.css'
+import { Spinner } from '../layouts/Spinner';
 
 const Register = () => {
 
@@ -9,11 +10,10 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showTrimPassword, setShowTrimPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleRegister = async()=>{
+    const handleRegister = async()=>{        
         try{
-            
-
             const username = trimUsername.trim();
             const password = trimPassword.trim();
 
@@ -22,11 +22,7 @@ const Register = () => {
             }else if(password.length === 0){
                 alert("Complete password")
             }else{
-
-            
-
-            // esto  es para quitarle espacios en blanco adelante y atras
-
+            setIsLoading(true);
             const response = await fetch('https://gtv-render.onrender.com/api/register',{
                 method: 'POST',
                 headers: {
@@ -46,9 +42,12 @@ const Register = () => {
             }
         }}catch(error){
             console.error('Error en la solicitud:', error);
-        }
+        } setIsLoading(false);
     };
 
+    if(isLoading){
+        return <Spinner/>
+    }
     const alertPassword = ()=>{
         alert("Passwords do not match");
     }

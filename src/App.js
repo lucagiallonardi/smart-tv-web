@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Home from './components/Home/Home';
 import Store from './components/Store/Store';
 import Favorites from './components/Favorites/Favorites';
+import { Spinner } from './components/layouts/Spinner';
 
 function App() {
 

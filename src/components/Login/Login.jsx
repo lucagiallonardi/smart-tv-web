@@ -1,36 +1,45 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import { Spinner } from '../layouts/Spinner';
 
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     
 
     const handleLogin = async () => {
-        try{
-            const response = await fetch('https://gtv-render.onrender.com/api/login',{
-                method:'POST',
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                body: JSON.stringify({username, password})
-            });
-
-            if(response.status ===200){
-                const { token } = await response.json();
-                localStorage.setItem('userAct', username);
-                localStorage.setItem('token', token); // Almacena el token en el almacenamiento local
-                window.location.reload();
-            }else{
-                alert("Invalid username or password");
+            setIsLoading(true);
+            try{
+                const response = await fetch('https://gtv-render.onrender.com/api/login',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify({username, password})
+                });
+    
+                if(response.status ===200){
+                    const { token } = await response.json();
+                    localStorage.setItem('userAct', username);
+                    localStorage.setItem('token', token); // Almacena el token en el almacenamiento local
+                    window.location.reload();
+                }else{
+                    alert("Invalid username or password");
+                }
+            }catch(error){
+                console.error('Error en la solicitud:', error);
             }
-        }catch(error){
-            console.error('Error en la solicitud:', error);
-        }
+            setIsLoading(false);
+       
     };
+
+     if(isLoading){
+            return <Spinner/>
+          } 
 
     return (
         <div className='loginContainer'>

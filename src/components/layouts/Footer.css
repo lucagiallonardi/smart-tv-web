@@ -9,3 +9,13 @@
     border: none;
     padding-bottom: 0;
 }
+
+
+.linkFoot{
+    text-decoration: none;
+    color: #ffffff6e;
+}
+
+.card-footer{
+    padding-top: 0;
+}
