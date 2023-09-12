@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
             <div className="card text-center footerContainer">
-            <div className="card-header">
-                Created by
-            </div>
             <div className="card-body">
                 <h5 className="card-title">Luca Giallonardi</h5>
                 <p className="card-text">Web Developer | Programmer Analyst</p>
