@@ -23,7 +23,7 @@ const Register = () => {
                 alert("Complete password")
             }else{
             setIsLoading(true);
-            const response = await fetch('https://gtv-render.onrender.com/home/api/register',{
+            const response = await fetch('https://gtv-render.onrender.com/api/register',{
                 method: 'POST',
                 headers: {
                     'Content-Type':'application/json'
