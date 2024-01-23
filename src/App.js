@@ -28,8 +28,8 @@ function App() {
       <>
       <Router>
       <Routes>
-        <Route path="/" element={<Login handleLogin={handleLogin}/>}></Route>
-        <Route path="/home" element={authenticated ? (
+        <Route path="/login" element={<Login handleLogin={handleLogin}/>}></Route>
+        <Route path="/" element={authenticated ? (
               <Home handleLogout={handleLogout} />
             ) : (
             <Login handleLogin={handleLogin} />)}></Route>
