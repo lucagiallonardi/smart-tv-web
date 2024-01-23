@@ -247,7 +247,7 @@ if(isLoading){
                 {groupedItems2.map((group, index) => (
                   <div className={`carousel-item recomended-item ${index === 0 ? "active" : ""}`} key={index}>
                     {group.map((item, itemIndex) => (
-                      <Link to={item.link}><img src={item.image} alt={item.title} target="_blank" key={item._id || itemIndex} 
+                      <Link to={item.link}><img src={item.image} alt={item.title} target={item.title === "Agregar" ? "" : "'_label'"} key={item._id || itemIndex} 
                       className={item.title === "Agregar" ? "simboloMas recomended-item-img" : "recomended-item-img"} onClick={() => {
                         if (item.title === "Agregar") {
                           setShowForm(true);
