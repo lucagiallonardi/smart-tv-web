@@ -107,7 +107,7 @@ setElements(storedElements);
         const decodedToken = jwt_decode(token);
         const userId = decodedToken.sub;
         const itemWithUserId = { ...item, userId };
-          const response = await fetch('https://gtv-render.onrender.com/api/items', {
+          const response = await fetch('https://gtv-render.onrender.com/home/api/items', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ setElements(storedElements);
           // Realiza una solicitud DELETE al servidor para eliminar el elemento
           const decodedToken = jwt_decode(token);
           const userId = decodedToken.sub;
-          const response = await fetch(`https://gtv-render.onrender.com/api/items/${itemTitle}`, {
+          const response = await fetch(`https://gtv-render.onrender.com/home/api/items/${itemTitle}`, {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',
