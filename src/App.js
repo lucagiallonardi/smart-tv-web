@@ -28,7 +28,7 @@ function App() {
       <>
       <Router>
       <Routes>
-        <Route path="/login" element=({<Login handleLogin={handleLogin}/>})></Route>
+        <Route path="/login" element={(<Login handleLogin={handleLogin}/>)}></Route>
         <Route path="/" element={authenticated ? (
               <Home handleLogout={handleLogout} />
             ) : (
