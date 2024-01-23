@@ -26,7 +26,7 @@ const Login = () => {
                     const { token } = await response.json();
                     localStorage.setItem('userAct', username);
                     localStorage.setItem('token', token); // Almacena el token en el almacenamiento local
-                    window.location.reload();
+                    window.location.href="/home";
                 }else{
                     alert("Invalid username or password");
                 }
