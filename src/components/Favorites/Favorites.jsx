@@ -18,7 +18,7 @@ useEffect(() => {
 link: "/" };
     const fetchItemsFromServer = async () => {
         try {
-          const response = await fetch('https://gtv-render.onrender.com/api/favorite-items', {
+          const response = await fetch('https://gtv-render.onrender.com/home/api/favorite-items', {
             headers: {
               Authorization: token,
             },
@@ -45,7 +45,7 @@ link: "/" };
       // eliminar favoritos
       const handleDeleteItem = async (itemId) => {
         try {
-          const response = await fetch(`https://gtv-render.onrender.com/api/delete-favorite-item/${itemId}`, {
+          const response = await fetch(`https://gtv-render.onrender.com/home/api/delete-favorite-item/${itemId}`, {
             method: 'DELETE',
             headers: {
               Authorization: token,
@@ -67,7 +67,7 @@ link: "/" };
       // agregar favoritos
       const addFavoriteItem = async (newItem) => {
         try {
-          const response = await fetch('https://gtv-render.onrender.com/api/add-favorite-item', {
+          const response = await fetch('https://gtv-render.onrender.com/home/api/add-favorite-item', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
