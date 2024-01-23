@@ -122,7 +122,7 @@ const Home = () => {
         const addItemFavoritePlaceholder = { title: "Agregar", image: "https://i.postimg.cc/W33cWb9R/simbolo.jpg", link: "/" };
         const fetchItemsFromServer = async () => {
     try {
-      const response = await fetch('https://gtv-render.onrender.com/api/favorite-items', {
+      const response = await fetch('https://gtv-render.onrender.com/home/api/favorite-items', {
         headers: {
           Authorization: token,
         },
